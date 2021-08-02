@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_redux/flutter_redux.dart';
-import 'package:redux/redux.dart';
-import 'package:movies/src/actions/index.dart';
 import 'package:movies/src/container/selected_movie_container.dart';
 import 'package:movies/src/container/user_container.dart';
 import 'package:movies/src/models/index.dart';
@@ -21,14 +18,7 @@ class MovieDetails extends StatelessWidget {
                 title: Text(movie.title),
                 leading: const UserAvatar(),
               ),
-              body: GestureDetector(
-                onTap: () {
-                  final Store<AppState> store = StoreProvider.of<AppState>(context);
-                  final List<Movie> movies = store.state.movies.toList()..shuffle();
-                  store.dispatch(SetSelectedMovie(movies.first.id));
-                },
-                child: Image.network(movie.largeImage),
-              ),
+              body: Image.network(movie.largeImage),
               floatingActionButton: FloatingActionButton.extended(
                 label: const Text('Review'),
                 icon: const Icon(Icons.message_outlined),
