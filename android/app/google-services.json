@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "591088293386",
+    "project_id": "movies-yts-fd10c",
+    "storage_bucket": "movies-yts-fd10c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591088293386:android:68a440ed7651352c04b1f3",
+        "android_client_info": {
+          "package_name": "com.example.movies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591088293386-td3u2lva7gn63v9lqe8jnculvqhiil6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiz4qbTy1VeJh508z0_CclERuwg1-hxZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591088293386-td3u2lva7gn63v9lqe8jnculvqhiil6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
