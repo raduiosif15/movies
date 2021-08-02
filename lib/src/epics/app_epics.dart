@@ -1,3 +1,4 @@
+import 'package:movies/src/data/user_api.dart';
 import 'package:redux_epics/redux_epics.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:movies/src/actions/index.dart';
@@ -6,12 +7,14 @@ import 'package:movies/src/data/movies_api.dart';
 import 'package:movies/src/models/index.dart';
 
 class AppEpics {
-  const AppEpics({required MoviesApi moviesApi, required AuthApi authApi})
+  const AppEpics({required MoviesApi moviesApi, required AuthApi authApi, required UserApi userApi})
       : _moviesApi = moviesApi,
-        _authApi = authApi;
+        _authApi = authApi,
+        _userApi = userApi;
 
   final MoviesApi _moviesApi;
   final AuthApi _authApi;
+  final UserApi _userApi;
 
   Epic<AppState> get epics {
     return combineEpics<AppState>(<Epic<AppState>>[
@@ -19,6 +22,7 @@ class AppEpics {
       TypedEpic<AppState, GetMoviesStart>(_getMovies),
       TypedEpic<AppState, RegisterStart>(_register),
       TypedEpic<AppState, SignOutStart>(_signOut),
+      TypedEpic<AppState, UpdateProfileUrlStart>(_updateProfileUrl),
     ]);
   }
 
@@ -50,5 +54,13 @@ class AppEpics {
         .asyncMap((SignOutStart action) => _authApi.signOut())
         .map((_) => const SignOut.successful())
         .onErrorReturnWith((Object error, StackTrace stackTrace) => SignOut.error(error, stackTrace));
+  }
+
+  Stream<AppAction> _updateProfileUrl(Stream<UpdateProfileUrlStart> actions, EpicStore<AppState> store) {
+    return actions //
+        .flatMap((UpdateProfileUrlStart action) => Stream<void>.value(null)
+            .asyncMap((_) => _userApi.updateProfileUrl(store.state.user!.uid, action.path))
+            .map((String url) => UpdateProfileUrl.successful(url))
+            .onErrorReturnWith((Object error, StackTrace stackTrace) => UpdateProfileUrl.error(error, stackTrace)));
   }
 }

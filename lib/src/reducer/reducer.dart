@@ -14,6 +14,7 @@ Reducer<AppState> reducer = combineReducers(<Reducer<AppState>>[
   TypedReducer<AppState, RegisterSuccessful>(_registerSuccessful),
   TypedReducer<AppState, InitializeAppSuccessful>(_initializeAppSuccessful),
   TypedReducer<AppState, SignOutSuccessful>(_signOutSuccessful),
+  TypedReducer<AppState, UpdateProfileUrlSuccessful>(_updateProfileUrlSuccessful),
 ]);
 
 AppState _getMovies(AppState state, GetMovies action) {
@@ -61,5 +62,11 @@ AppState _initializeAppSuccessful(AppState state, InitializeAppSuccessful action
 AppState _signOutSuccessful(AppState state, SignOutSuccessful action) {
   return state.rebuild((AppStateBuilder b) {
     b.user = null;
+  });
+}
+
+AppState _updateProfileUrlSuccessful(AppState state, UpdateProfileUrlSuccessful action) {
+  return state.rebuild((AppStateBuilder b) {
+    b.user.photoUrl = action.url;
   });
 }

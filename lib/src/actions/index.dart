@@ -9,6 +9,7 @@ part 'initialize_app.dart';
 part 'register.dart';
 part 'set.dart';
 part 'sign_out.dart';
+part 'update_profile_url.dart';
 
 abstract class AppAction {}
 

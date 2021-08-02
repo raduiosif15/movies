@@ -1756,3 +1756,437 @@ abstract class SignOutError implements SignOut, ErrorAction {
   @JsonKey(ignore: true)
   $SignOutErrorCopyWith<SignOutError> get copyWith => throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+class _$UpdateProfileUrlTearOff {
+  const _$UpdateProfileUrlTearOff();
+
+  UpdateProfileUrlStart call(String path) {
+    return UpdateProfileUrlStart(
+      path,
+    );
+  }
+
+  UpdateProfileUrlSuccessful successful(String url) {
+    return UpdateProfileUrlSuccessful(
+      url,
+    );
+  }
+
+  UpdateProfileUrlError error(Object error, StackTrace stackTrace) {
+    return UpdateProfileUrlError(
+      error,
+      stackTrace,
+    );
+  }
+}
+
+/// @nodoc
+const $UpdateProfileUrl = _$UpdateProfileUrlTearOff();
+
+/// @nodoc
+mixin _$UpdateProfileUrl {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String path) $default, {
+    required TResult Function(String url) successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String path)? $default, {
+    TResult Function(String url)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(UpdateProfileUrlStart value) $default, {
+    required TResult Function(UpdateProfileUrlSuccessful value) successful,
+    required TResult Function(UpdateProfileUrlError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(UpdateProfileUrlStart value)? $default, {
+    TResult Function(UpdateProfileUrlSuccessful value)? successful,
+    TResult Function(UpdateProfileUrlError value)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UpdateProfileUrlCopyWith<$Res> {
+  factory $UpdateProfileUrlCopyWith(UpdateProfileUrl value, $Res Function(UpdateProfileUrl) then) =
+      _$UpdateProfileUrlCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$UpdateProfileUrlCopyWithImpl<$Res> implements $UpdateProfileUrlCopyWith<$Res> {
+  _$UpdateProfileUrlCopyWithImpl(this._value, this._then);
+
+  final UpdateProfileUrl _value;
+  // ignore: unused_field
+  final $Res Function(UpdateProfileUrl) _then;
+}
+
+/// @nodoc
+abstract class $UpdateProfileUrlStartCopyWith<$Res> {
+  factory $UpdateProfileUrlStartCopyWith(UpdateProfileUrlStart value, $Res Function(UpdateProfileUrlStart) then) =
+      _$UpdateProfileUrlStartCopyWithImpl<$Res>;
+  $Res call({String path});
+}
+
+/// @nodoc
+class _$UpdateProfileUrlStartCopyWithImpl<$Res> extends _$UpdateProfileUrlCopyWithImpl<$Res>
+    implements $UpdateProfileUrlStartCopyWith<$Res> {
+  _$UpdateProfileUrlStartCopyWithImpl(UpdateProfileUrlStart _value, $Res Function(UpdateProfileUrlStart) _then)
+      : super(_value, (v) => _then(v as UpdateProfileUrlStart));
+
+  @override
+  UpdateProfileUrlStart get _value => super._value as UpdateProfileUrlStart;
+
+  @override
+  $Res call({
+    Object? path = freezed,
+  }) {
+    return _then(UpdateProfileUrlStart(
+      path == freezed
+          ? _value.path
+          : path // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateProfileUrlStart implements UpdateProfileUrlStart {
+  const _$UpdateProfileUrlStart(this.path);
+
+  @override
+  final String path;
+
+  @override
+  String toString() {
+    return 'UpdateProfileUrl(path: $path)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is UpdateProfileUrlStart &&
+            (identical(other.path, path) || const DeepCollectionEquality().equals(other.path, path)));
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(path);
+
+  @JsonKey(ignore: true)
+  @override
+  $UpdateProfileUrlStartCopyWith<UpdateProfileUrlStart> get copyWith =>
+      _$UpdateProfileUrlStartCopyWithImpl<UpdateProfileUrlStart>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String path) $default, {
+    required TResult Function(String url) successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return $default(path);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String path)? $default, {
+    TResult Function(String url)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default(path);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(UpdateProfileUrlStart value) $default, {
+    required TResult Function(UpdateProfileUrlSuccessful value) successful,
+    required TResult Function(UpdateProfileUrlError value) error,
+  }) {
+    return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(UpdateProfileUrlStart value)? $default, {
+    TResult Function(UpdateProfileUrlSuccessful value)? successful,
+    TResult Function(UpdateProfileUrlError value)? error,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateProfileUrlStart implements UpdateProfileUrl {
+  const factory UpdateProfileUrlStart(String path) = _$UpdateProfileUrlStart;
+
+  String get path => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UpdateProfileUrlStartCopyWith<UpdateProfileUrlStart> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UpdateProfileUrlSuccessfulCopyWith<$Res> {
+  factory $UpdateProfileUrlSuccessfulCopyWith(
+          UpdateProfileUrlSuccessful value, $Res Function(UpdateProfileUrlSuccessful) then) =
+      _$UpdateProfileUrlSuccessfulCopyWithImpl<$Res>;
+  $Res call({String url});
+}
+
+/// @nodoc
+class _$UpdateProfileUrlSuccessfulCopyWithImpl<$Res> extends _$UpdateProfileUrlCopyWithImpl<$Res>
+    implements $UpdateProfileUrlSuccessfulCopyWith<$Res> {
+  _$UpdateProfileUrlSuccessfulCopyWithImpl(
+      UpdateProfileUrlSuccessful _value, $Res Function(UpdateProfileUrlSuccessful) _then)
+      : super(_value, (v) => _then(v as UpdateProfileUrlSuccessful));
+
+  @override
+  UpdateProfileUrlSuccessful get _value => super._value as UpdateProfileUrlSuccessful;
+
+  @override
+  $Res call({
+    Object? url = freezed,
+  }) {
+    return _then(UpdateProfileUrlSuccessful(
+      url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateProfileUrlSuccessful implements UpdateProfileUrlSuccessful {
+  const _$UpdateProfileUrlSuccessful(this.url);
+
+  @override
+  final String url;
+
+  @override
+  String toString() {
+    return 'UpdateProfileUrl.successful(url: $url)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is UpdateProfileUrlSuccessful &&
+            (identical(other.url, url) || const DeepCollectionEquality().equals(other.url, url)));
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(url);
+
+  @JsonKey(ignore: true)
+  @override
+  $UpdateProfileUrlSuccessfulCopyWith<UpdateProfileUrlSuccessful> get copyWith =>
+      _$UpdateProfileUrlSuccessfulCopyWithImpl<UpdateProfileUrlSuccessful>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String path) $default, {
+    required TResult Function(String url) successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return successful(url);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String path)? $default, {
+    TResult Function(String url)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (successful != null) {
+      return successful(url);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(UpdateProfileUrlStart value) $default, {
+    required TResult Function(UpdateProfileUrlSuccessful value) successful,
+    required TResult Function(UpdateProfileUrlError value) error,
+  }) {
+    return successful(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(UpdateProfileUrlStart value)? $default, {
+    TResult Function(UpdateProfileUrlSuccessful value)? successful,
+    TResult Function(UpdateProfileUrlError value)? error,
+    required TResult orElse(),
+  }) {
+    if (successful != null) {
+      return successful(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateProfileUrlSuccessful implements UpdateProfileUrl {
+  const factory UpdateProfileUrlSuccessful(String url) = _$UpdateProfileUrlSuccessful;
+
+  String get url => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UpdateProfileUrlSuccessfulCopyWith<UpdateProfileUrlSuccessful> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UpdateProfileUrlErrorCopyWith<$Res> {
+  factory $UpdateProfileUrlErrorCopyWith(UpdateProfileUrlError value, $Res Function(UpdateProfileUrlError) then) =
+      _$UpdateProfileUrlErrorCopyWithImpl<$Res>;
+  $Res call({Object error, StackTrace stackTrace});
+}
+
+/// @nodoc
+class _$UpdateProfileUrlErrorCopyWithImpl<$Res> extends _$UpdateProfileUrlCopyWithImpl<$Res>
+    implements $UpdateProfileUrlErrorCopyWith<$Res> {
+  _$UpdateProfileUrlErrorCopyWithImpl(UpdateProfileUrlError _value, $Res Function(UpdateProfileUrlError) _then)
+      : super(_value, (v) => _then(v as UpdateProfileUrlError));
+
+  @override
+  UpdateProfileUrlError get _value => super._value as UpdateProfileUrlError;
+
+  @override
+  $Res call({
+    Object? error = freezed,
+    Object? stackTrace = freezed,
+  }) {
+    return _then(UpdateProfileUrlError(
+      error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as Object,
+      stackTrace == freezed
+          ? _value.stackTrace
+          : stackTrace // ignore: cast_nullable_to_non_nullable
+              as StackTrace,
+    ));
+  }
+}
+
+/// @nodoc
+
+@Implements(ErrorAction)
+class _$UpdateProfileUrlError implements UpdateProfileUrlError {
+  const _$UpdateProfileUrlError(this.error, this.stackTrace);
+
+  @override
+  final Object error;
+  @override
+  final StackTrace stackTrace;
+
+  @override
+  String toString() {
+    return 'UpdateProfileUrl.error(error: $error, stackTrace: $stackTrace)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is UpdateProfileUrlError &&
+            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)) &&
+            (identical(other.stackTrace, stackTrace) ||
+                const DeepCollectionEquality().equals(other.stackTrace, stackTrace)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(error) ^
+      const DeepCollectionEquality().hash(stackTrace);
+
+  @JsonKey(ignore: true)
+  @override
+  $UpdateProfileUrlErrorCopyWith<UpdateProfileUrlError> get copyWith =>
+      _$UpdateProfileUrlErrorCopyWithImpl<UpdateProfileUrlError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String path) $default, {
+    required TResult Function(String url) successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return error(this.error, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String path)? $default, {
+    TResult Function(String url)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this.error, stackTrace);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(UpdateProfileUrlStart value) $default, {
+    required TResult Function(UpdateProfileUrlSuccessful value) successful,
+    required TResult Function(UpdateProfileUrlError value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(UpdateProfileUrlStart value)? $default, {
+    TResult Function(UpdateProfileUrlSuccessful value)? successful,
+    TResult Function(UpdateProfileUrlError value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateProfileUrlError implements UpdateProfileUrl, ErrorAction {
+  const factory UpdateProfileUrlError(Object error, StackTrace stackTrace) = _$UpdateProfileUrlError;
+
+  Object get error => throw _privateConstructorUsedError;
+  StackTrace get stackTrace => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UpdateProfileUrlErrorCopyWith<UpdateProfileUrlError> get copyWith => throw _privateConstructorUsedError;
+}
