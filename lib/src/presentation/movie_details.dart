@@ -25,8 +25,6 @@ class MovieDetails extends StatelessWidget {
                 onPressed: () {
                   if (user == null) {
                     Navigator.pushNamed(context, '/login');
-                  } else {
-                    // show reviews page
                   }
                 },
               ),

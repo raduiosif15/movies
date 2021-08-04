@@ -57,8 +57,16 @@ class UserPage extends StatelessWidget {
                       ),
                     ),
                   ],
-                )
+                ),
               ],
+            ),
+            floatingActionButton: FloatingActionButton.extended(
+              label: const Text('Sign out'),
+              icon: const Icon(Icons.logout),
+              onPressed: () {
+                Navigator.pop(context);
+                StoreProvider.of<AppState>(context).dispatch(const SignOut());
+              },
             ),
           ),
         );

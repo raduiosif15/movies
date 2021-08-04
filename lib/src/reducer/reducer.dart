@@ -3,10 +3,6 @@ import 'package:movies/src/actions/index.dart';
 import 'package:movies/src/models/index.dart';
 
 Reducer<AppState> reducer = combineReducers(<Reducer<AppState>>[
-  (AppState state, dynamic action) {
-    print(action);
-    return state;
-  },
   TypedReducer<AppState, GetMovies>(_getMovies),
   TypedReducer<AppState, GetMoviesSuccessful>(_getMoviesSuccessful),
   TypedReducer<AppState, GetMoviesError>(_getMoviesError),
@@ -25,7 +21,6 @@ AppState _getMovies(AppState state, GetMovies action) {
 
 AppState _getMoviesSuccessful(AppState state, GetMoviesSuccessful action) {
   return state.rebuild((AppStateBuilder b) {
-    print('page is now: ${state.page + 1}');
     b
       ..movies.addAll(action.movies)
       ..isLoading = false

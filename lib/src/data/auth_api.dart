@@ -41,16 +41,20 @@ class AuthApi {
       }
     }
 
-    final AppUser user = AppUser((AppUserBuilder b) {
-      b
-        ..uid = result.user!.uid
-        ..username = email.split('@').first
-        ..email = email;
-    });
+    AppUser? user = await getCurrentUser();
 
-    await _firestore //
-        .doc('users/${user.uid}')
-        .set(user.json);
+    if (user == null) {
+      user = AppUser((AppUserBuilder b) {
+        b
+          ..uid = result.user!.uid
+          ..username = email.split('@').first
+          ..email = email;
+      });
+
+      await _firestore //
+          .doc('users/${user.uid}')
+          .set(user.json);
+    }
 
     return user;
   }
